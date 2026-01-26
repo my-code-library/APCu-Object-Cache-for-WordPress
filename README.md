@@ -120,11 +120,11 @@ WP‑CLI will show no APCu usage (by design).
 
 ## Troubleshooting
 
-### WP‑CLI shows no APCu**
+**WP‑CLI shows no APCu**
 
 This is intentional.
 
-### Site shows “APCu not available”
+**Site shows “APCu not available”**
 
 APCu is disabled inside WP‑CLI to prevent recursion and memory exhaustion.
 
@@ -138,13 +138,13 @@ phpinfo()
 
 or contact Bluehost support.
 
-### Memory exhaustion errors
+**Memory exhaustion errors**
 
 This drop‑in includes recursion guards and WP‑CLI isolation, so memory loops should not occur.
 
 If they do, a plugin or theme may be causing recursive cache calls.
 
-### License
+## License
 
 MIT License.
 Use, modify, and distribute freely.
