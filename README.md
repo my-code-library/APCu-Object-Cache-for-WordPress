@@ -50,6 +50,7 @@ Prevents recursion loops and memory exhaustion during commands like:
 wp plugin list
 wp cache flush
 wp theme activate
+
 ```
 WP‑CLI instead uses a lightweight in‑memory array cache.
 
@@ -87,9 +88,48 @@ If APCu is unavailable, WordPress continues normally.
 
 1. Download or copy the `object-cache.php` file.
 2. Upload it to:
+3. 
+
 ```
 wp-content/object-cache.php
+
 ```
 3. No activation is required — WordPress automatically detects the drop‑in.
 
 ## Verification
+
+Go to:
+
+**Tools → Site Health → Info → Server**
+
+You should see:
+
+```
+Persistent Object Cache: Enabled (APCu)
+```
+
+WP‑CLI will show no APCu usage (by design).
+
+## Compatibility
+
+* WordPress **6.x**
+* PHP **7.4 – 8.3**
+* Bluehost shared hosting
+* WP‑CLI
+* Any theme (including Oaknut)
+* Any plugin using the WordPress Cache API
+
+## Troubleshooting
+
+**WP‑CLI shows no APCu**
+
+Your PHP environment may not have APCu enabled for web requests.
+
+Check with:
+
+```
+phpinfo()
+
+```
+
+
