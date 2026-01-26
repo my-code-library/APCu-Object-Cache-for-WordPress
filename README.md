@@ -1,6 +1,6 @@
 # APCu Object Cache Drop‑In for WordPress
 
-### Bluehost‑Safe • WP‑CLI‑Safe • Recursion‑Guarded
+**Bluehost‑Safe • WP‑CLI‑Safe • Recursion‑Guarded**
 
 ## Overview
 
