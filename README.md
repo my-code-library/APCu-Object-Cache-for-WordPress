@@ -50,7 +50,6 @@ Prevents recursion loops and memory exhaustion during commands like:
 wp plugin list
 wp cache flush
 wp theme activate
-
 ```
 WP‑CLI instead uses a lightweight in‑memory array cache.
 
@@ -92,8 +91,8 @@ If APCu is unavailable, WordPress continues normally.
 
 ```
 wp-content/object-cache.php
-
 ```
+
 3. No activation is required — WordPress automatically detects the drop‑in.
 
 ## Verification
@@ -121,7 +120,13 @@ WP‑CLI will show no APCu usage (by design).
 
 ## Troubleshooting
 
-**WP‑CLI shows no APCu**
+### WP‑CLI shows no APCu**
+
+This is intentional.
+
+### Site shows “APCu not available”
+
+APCu is disabled inside WP‑CLI to prevent recursion and memory exhaustion.
 
 Your PHP environment may not have APCu enabled for web requests.
 
@@ -129,7 +134,17 @@ Check with:
 
 ```
 phpinfo()
-
 ```
 
+or contact Bluehost support.
 
+### Memory exhaustion errors
+
+This drop‑in includes recursion guards and WP‑CLI isolation, so memory loops should not occur.
+
+If they do, a plugin or theme may be causing recursive cache calls.
+
+### License
+
+MIT License.
+Use, modify, and distribute freely.
