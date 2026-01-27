@@ -9,17 +9,11 @@ This repository provides a hardened, production‑safe `object-cache.php` drop�
 This drop‑in is:
 
 * Safe for WP‑CLI (APCu disabled automatically)
-
 * Safe for shared hosting
-
 * Fully WordPress‑compatible
-
 * Non‑recursive
-
 * Memory‑safe
-
 * Theme/plugin‑safe (including Oaknut)
-
 * Zero‑configuration
 
 ## Why This Drop‑In Exists
